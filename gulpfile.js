@@ -4,12 +4,11 @@ const gulp = require("gulp");
 const webpack = require("webpack-stream");
 const browsersync = require("browser-sync");
 var ghPages = require("gulp-gh-pages");
+const dist = "./dist/";
 
 gulp.task("deploy", function () {
   return gulp.src("./dist/**/*").pipe(ghPages());
 });
-
-const dist = "./dist/";
 
 gulp.task("copy-html", () => {
   return gulp
